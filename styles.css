@@ -1,9 +1,52 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+    color: #2D3748;
+}
+
+.header {
+    grid-area: header;
+    background-color: #63B3ED;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .profile-image{
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover; 
   border: 2px solid #333;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 20px;
+}
+
+.blog-post h2 {
+    font-size: 32px;
+    color: #48BB78;
 }
 
 .post-meta{
@@ -21,14 +64,58 @@
   float: left;
   margin-right: 20px;
   width: 200px;
-  height: auto;
+  height: 250px;
   border-radius: 5px;
 }
 
 .post-image-right {
   float: right;
-  margin-left: 20px;
+  margin-right: 20px;
   width: 200px;
-  height: auto;
+  height: 200px;
   border-radius: 5px;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.about h3 {
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about {
+    background-color: #E2E8F0;
+    padding: 10px;
+}
+
+.social-media h3, .archives h3 {
+    color: #48BB78;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.social-media ul li a, .archives ul li a {
+    color: #4299E1;
+    text-decoration: none;
+}
+
+.social-media ul, .archives ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2C5282;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 10px;
+}
+
+.footer-content{
+  margin-left: 20%;
 }
